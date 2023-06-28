@@ -21,15 +21,18 @@ class FriendList(models.Model):
     def __str__(self) -> str:
         return f"{self.user}"
 
+
 class Friend(models.Model):
     friend = models.ForeignKey(User, on_delete=models.CASCADE)
     friendlist = models.ForeignKey(FriendList, on_delete=models.CASCADE)
+
 
 class BanList(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return self.user.username
+
 
 class BanUser(models.Model):
     ban_friend = models.ForeignKey(User, on_delete=models.CASCADE)

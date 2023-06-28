@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from rest_framework import viewsets, mixins
-from .serializers import MessageSerializer, FriendListSerializer, FriendSerializer, BanListSerializer, BanUserSerializer 
+from .serializers import (
+    MessageSerializer,
+    FriendListSerializer,
+    FriendSerializer,
+    BanListSerializer,
+    BanUserSerializer,
+)
 from .models import Message, FriendList, Friend
 
 

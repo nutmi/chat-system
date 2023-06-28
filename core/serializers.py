@@ -1,14 +1,18 @@
 from rest_framework import serializers
 from .models import Message, FriendList, Friend, BanList, BanUser
 
+
 class BanListSerializer(serializers.ModelSerializer):
     class Meta:
         model = BanList
         fields = "__all__"
+
+
 class BanUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = BanUser
         fields = "__all__"
+
 
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
